@@ -2,13 +2,13 @@
 
 let empty: any = ' ';
 let star: string = '*';
-let lineCount: number = 4;
+let lineCount: number = 5;
 
-for(let i: number = 0; i < lineCount; i++){
-    for(let j: number = lineCount; i < j;j--){
+for (let i: number = 0; i < lineCount; i++) {
+    for (let j: number = lineCount; i < j; j--) {
         empty = empty + ' '
     }
-    console.log(empty+star);
+    console.log(empty + star);
     star = star + '**'
     empty = ' '
 }
