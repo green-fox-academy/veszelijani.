@@ -10,7 +10,8 @@ try {
     console.log("File doesn't exist");
 }
 function reverseIt(path: string){
-let newContent: string = fileContent.split('').reverse().join('').split(' ').reverse().join(' ');
+let newContent: string = fileContent.split('').reverse().join('').split('\n\r').reverse().join('\n\r')
+console.log(newContent)
 fs.writeFileSync('newText.txt', newContent);
 }
 reverseIt(fileContent);
