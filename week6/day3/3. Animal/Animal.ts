@@ -23,9 +23,8 @@ class Animal {
     }
 }
 let Tiger = new Animal();
-Tiger.drink()
-Tiger.eat()
+Tiger.drink();
+Tiger.eat();
 console.log(Tiger)
-Tiger.play()
+Tiger.play();
 console.log(Tiger)
-
