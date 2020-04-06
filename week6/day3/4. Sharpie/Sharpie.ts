@@ -1,6 +1,8 @@
 'use strict';
 
-class Sharpie{
+import { SharpieSet } from '/Users/nopen/OneDrive/Desktop/greenfox/week6/day3/11. Sharpie Set/sharpieSet'
+
+export class Sharpie{
     private _color: string;
     private _width: number;
     private _inkAmount: number;
@@ -10,11 +12,10 @@ class Sharpie{
         this._width = width;
         this._inkAmount = 100;
     }
-    public use(): void{
-        this._inkAmount -= 10;
+    public use(amount = 1): void{
+        this._inkAmount -= 10 * amount;
+    }
+    public get InkAmount(): number{
+        return this._inkAmount;
     }
 }
-
-let Sharpie1 = new Sharpie('Black', 3)
-Sharpie1.use();
-
