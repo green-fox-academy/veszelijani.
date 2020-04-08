@@ -1,26 +1,22 @@
 'use strict';
 
-class Pirate {
+export class Pirate {
     private _drinkRum: number = 0;
     private _stillAlive: boolean = true;
 
     constructor() {
         this._stillAlive = true
     }
-
     public drinkSomeRum(): void {
         if (this._stillAlive === false) {
-            let reply = "he's dead.";
-            console.log(reply);
+            console.log("he's dead.");
         } else {
             this._drinkRum++;
         }
     }
     public howsItGoingMate(): void {
         if (this._stillAlive === false) {
-            let reply = "he's dead.";
-            console.log(reply);
-            this.parrot(reply);
+            console.log("he's dead.");
         } if (this._drinkRum <= 4 && this._stillAlive === true) {
             let reply = "Pour me anudder!";
             console.log(reply);
