@@ -1,11 +1,13 @@
 'use strict';
 
 export class Pirate {
-    private _drinkRum: number = 0;
+    private _drinkRum: number = 0
     private _stillAlive: boolean = true;
 
-    constructor() {
+    constructor(drinkRum: number = 0, name?:string) {
         this._stillAlive = true
+        this._drinkRum = drinkRum
+
     }
     public drinkSomeRum(): void {
         if (this._stillAlive === false) {
@@ -60,18 +62,24 @@ export class Pirate {
     public parrot(reply) {
         console.log(reply);
     }
+    public get drinkThatRum(): number{
+        return this._drinkRum;
+    }
+    public get IsThePirateStillAlive(): boolean{
+        return this._stillAlive;
+    }
 }
 let captain: Pirate = new Pirate;
-let jimmy: Pirate = new Pirate;
+let jimmy: Pirate = new Pirate(5);
 captain.drinkSomeRum()
 console.log(captain)
-captain.howsItGoingMate()
-captain.drinkSomeRum()
-captain.drinkSomeRum()
-captain.drinkSomeRum()
-captain.drinkSomeRum()
-captain.howsItGoingMate()
-console.log(captain)
-captain.brawl(jimmy)
-console.log(captain)
+//captain.howsItGoingMate()
+//captain.drinkSomeRum()
+//captain.drinkSomeRum()
+//captain.drinkSomeRum()
+//captain.drinkSomeRum()
+//captain.howsItGoingMate()
+//console.log(captain)
+//captain.brawl(jimmy)
+//console.log(captain)
 console.log(jimmy)
