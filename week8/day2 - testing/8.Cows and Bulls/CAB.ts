@@ -1,16 +1,19 @@
 'use strict';
 
-import { finished } from "stream";
-
-class CAB {
+export class CAB {
     private _randomNumber: number = Math.floor(Math.random() * 9000) + 1000;
     private _guessedNumber: number;
     private _cows: number = 0;
     private _bulls: number = 0;
     private _chance: number = 0;
 
-    public guess(number: number): void {
+    public guess(number: number): any {
         this._guessedNumber = number;
+        if(number.toString().length != 4){
+            return 'Invalid number';
+        }else{
+            return this._guessedNumber
+        }
     }
 
     public playing(): string {
@@ -23,7 +26,7 @@ class CAB {
 
         let splitted: string[] = this._randomNumber.toString().split('');
         let guessSplitted: string[] = this._guessedNumber.toString().split('');
-        if (guessSplitted.length !== 4 || splitted.length !== 4) {
+        if (splitted.length !== 4) {
             return 'Invalid number';
         } else {
             for (let i: number = 0; i < 4; i++) {
@@ -59,3 +62,6 @@ class CAB {
         return this._randomNumber;
     }
 }
+
+let cabbo = new CAB;
+console.log(cabbo.guess(2133))
