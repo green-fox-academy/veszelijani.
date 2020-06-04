@@ -1,0 +1,19 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    width : 700px ;
+    height : 350px;
+    background: #ffd62a;
+    position: absolute;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+}
+li{
+    list-style: none;
+    margin: 5px;
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+}
