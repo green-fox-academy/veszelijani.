@@ -1,0 +1,17 @@
+.container{
+    display: flex;
+    flex-flow: row;
+}
+.item{
+    width: 200px;
+    height: 200px;
+}
+.purple{
+    background-color: rgb(177, 43, 177);
+}
+.green{
+    background-color: rgb(61, 220, 61);
+}
+.yellow{
+    background-color: rgb(255, 196, 0);
+}

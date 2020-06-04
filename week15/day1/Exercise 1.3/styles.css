@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-flow: row-reverse;
+}
+.item{
+    width: 190px;
+    height: 190px;
+    flex-grow: 0;
+}
+.green{
+    background-color: rgb(51, 209, 7);
+    max-width: 300px;
+    max-height: 300px;
+}
+.yellow{
+    background-color: rgb(252, 255, 47);
+    flex-grow: 3;
+}
+.purple{
+    background-color: rgb(128, 58, 177);
+    max-width: 300px;
+    max-height: 300px;
+}
