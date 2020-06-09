@@ -1,0 +1,39 @@
+body{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.container{
+    width: auto;
+    height: 60px;
+    background-color: purple;
+    margin-bottom: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    list-style: none;
+}
+
+.item{
+    width: 100px;
+    height: 30px;
+    background-color: cyan;
+    margin-left: 15px;
+}
+
+.Yellow{
+    width: 75%;
+    height: auto;
+    background-color: yellow;
+}
+
+.Green{
+    width: 25%;
+    height: 700px;
+    background-color: rgb(4, 211, 4);
+}
+
+.boxes{
+    display: flex;
+    justify-content: start;
+}
