@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    width: auto;
+    height: 60px;
+    background-color: purple;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    list-style: none;
+}
+
+.item{
+    width: 80px;
+    height: 30px;
+    background-color: cyan;
+    margin-left: 15px;
+}
+
+.Yellow{
+    width: 75%;
+    margin: 0px 30px 5px 8px;
+    height: auto;
+    background-color: yellow;
+}
+
+.Green{
+    width: 25%;
+    margin: 0px 8px 5px 30px;
+    height: 550px;
+    background-color: rgb(4, 211, 4);
+}
+
+.boxes{
+    display: flex;
+    margin: 20px;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+}
+.Grey{
+    background-color: grey;
+    width: auto;
+    height: 80px;
+    margin: -10px 50px 50px 50px;
+}
