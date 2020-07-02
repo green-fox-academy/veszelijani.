@@ -18,6 +18,8 @@ app.listen(PORT, () => {
     console.log(`The server is up and running on ${PORT}`);
 });
 
+//Doubling
+
 app.get('/doubling', (req, res) => {
     let input = parseInt(req.query.input)
     res.json(doubling(input))
@@ -26,6 +28,9 @@ function doubling(number) {
     if (!number) return { "error": "Please provide an input!" };
     return { 'received': number, 'result': number * 2 };
 }
+
+//Greeter
+
 app.get('/greeter', (req, res) => {
     let name = req.query.name;
     let title = req.query.title;
@@ -42,16 +47,20 @@ app.get('/greeter', (req, res) => {
         res.status(400);
         res.json({ "error": "Please provide a title!" });
     }
-    else{
-        res.json({"welcome_message": `Oh, hi there ${name}, my dear ${title}!`});
+    else {
+        res.json({ "welcome_message": `Oh, hi there ${name}, my dear ${title}!` });
     }
 });
+
+//Appenda
 
 app.get('/appenda/:appended', (req, res) => {
     let appended = req.params.appended;
     res.json({ "appended": appended + 'a' })
 
 })
+
+//Do until
 
 app.post('/dountil/:action/', jsonParser, (req, res) => {
     let action = req.params.action;
@@ -81,3 +90,39 @@ function factor(num) {
     }
     return num;
 }
+
+//Array
+
+app.post('/arrays', jsonParser, (req, res) => {
+    let action = req.body.what;
+    let numbers = req.body.numbers
+
+    if (numbers.length > 0 && (action === 'sum' || action === 'multiply' || action === 'double')) {
+        if (action === 'sum') {
+            res.json({
+                "result": numbers.reduce((a, b) => {
+                    return a + b;
+                })
+            })
+        }
+        if (action === 'multiply') {
+            res.json({
+                "result": numbers.reduce((a, b) => {
+                    return a * b;
+                })
+            })
+        }
+        if (action === 'double') {
+            res.json({
+                "result": numbers.map((e) => {
+                    return e * 2;
+                })
+            });
+        }
+
+    } else {
+        res.json({
+            "error": "Please provide what to do with the numbers!"
+        });
+    }
+});
