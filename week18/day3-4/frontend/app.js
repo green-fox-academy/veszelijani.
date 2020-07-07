@@ -126,3 +126,45 @@ app.post('/arrays', jsonParser, (req, res) => {
         });
     }
 });
+
+//sith
+
+app.post('/sith', jsonParser, (req, res) => {
+    let text = req.body.text;
+    if (!text) {
+        res.json({
+            "error": "Feed me some text you have to, padawan young you are. Hmmm."
+        });
+    } else {
+        res.json({
+            "sith_text": YodaText(text)
+        })
+    }
+})
+
+function YodaText(text) {
+    let newOne = text.toLowerCase().split('.')
+    let words = newOne.map(e => e.split(' '));
+    let title = '';
+    let yodaWords = ['Arrgh.', 'Uhmm.', 'Err..err.err.'];
+
+    for (let i = 0; i < words.length; i++) {
+        for (let j = 0; j < words[i].length - 1; j++) {
+            if (j % 2 === 0) {
+                [words[i][j], words[i][j + 1]] = [words[i][j + 1], words[i][j]];
+
+            }
+        }
+    }
+    for (let i = 0; i < words.length; i++) {
+        for (let j = 0; j < words[i].length; j++) {
+
+            if (i <= 1 && j == 0) {
+                words[i][j] = words[i][j].replace(words[i][j].charAt(0), words[i][j].charAt(0).toUpperCase())
+                words[i].push(yodaWords[Math.floor(Math.random() * yodaWords.length)]);
+            }
+            title = words.join(' ').split(',').join(' ').split('  ').join(' ');
+        }
+    }
+    return title;
+}
