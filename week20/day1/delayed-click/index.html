@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Workshop: EventListeners</title>
+    <style>
+        .opened {
+            display: contents;
+        }
+
+        .closed {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Click me</button>
+    <div id='content' class='closed'>
+        <p>2 seconds ellapsed</p>
+        
+    </div>
+
+    <script>
+        'use strict';
+
+        const button = document.querySelector('button');
+        const content = document.querySelector('#content');
+        button.addEventListener('click', (e) => {
+            setTimeout(twoSeconds, 2000)
+        })
+        function twoSeconds(){
+            content.className = 'opened'
+        }
+    </script>
+
+
+</body>
+
+</html>
