@@ -1,0 +1,23 @@
+.boxes .small {
+    background: rgb(238, 211, 9);
+}
+
+.boxes .large {
+    background: rgb(44, 198, 2);
+}
+
+.boxes {
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-column-gap: 13px;
+    padding: 15px 15px;
+    height: 300px;
+    display: grid;
+    background-color: rgb(176, 42, 255);
+}
+.large, .small {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46pt;
+    color: white;
+}
