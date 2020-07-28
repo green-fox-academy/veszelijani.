@@ -1,0 +1,32 @@
+.purple {
+    background-color: purple;
+    height: auto;
+}
+
+.yellow {
+    background-color: yellow;
+    width: 70%;
+    height: 65%;
+}
+
+.green {
+    background-color: green;
+    height: auto;
+}
+
+.boxes {
+    display: grid;
+    height: 600px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    background-color: black;
+}
+
+#seventh {
+    grid-row: 1 / 3;
+    grid-column: 2 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
