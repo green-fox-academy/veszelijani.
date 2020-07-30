@@ -16,6 +16,6 @@ conn.connect((err) => {
         console.log(err);
         return;
     }
-    console.log('Succesfully connect');
+    console.log('Succesfully connect to the Database');
 })
 module.exports = conn;

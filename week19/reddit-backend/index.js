@@ -3,12 +3,11 @@
 const express = require('express');
 const app = express();
 const PORT = 8080;
-
-app.set('view engine', 'ejs');
-
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }));
 const jsonParser = bodyParser.json();
+app.set('view engine', 'ejs');
+module.exports = jsonParser;
 
 const redditController = require('./controller/controller')
 
